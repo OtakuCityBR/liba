@@ -91,30 +91,23 @@ body {
     justify-content: space-between;
     align-items: center;
     min-height: 70px;
+    position: relative; /* Adicionado para posicionamento do logo */
 }
 
 .logo {
-    font-family: var(--font-japanese);
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--primary-red);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-}
-
-.logo::before {
-    content: "";
-    display: inline-block;
-    width: 1.5em; /* Usando em para manter proporção com o texto */
-    height: 1.5em;
+    display: block;
+    width: 48px;
+    height: 48px;
     background-image: url('https://i.ibb.co/VYzm94Yz/logolib.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    vertical-align: middle;
-    flex-shrink: 0; /* Impede que a imagem diminua */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Removidas propriedades de texto */
+    text-indent: -9999px; /* Esconde texto para acessibilidade */
+    overflow: hidden;
 }
 
 .location-info {
@@ -170,6 +163,32 @@ body {
     color: var(--primary-red);
     cursor: pointer;
     padding: var(--spacing-xs);
+}
+
+/* Media Query para desktop */
+@media (min-width: 768px) {
+    .logo {
+        width: 60px; /* 50% maior que no mobile */
+        height: 60px;
+    }
+    
+    .location-info {
+        display: block;
+        position: absolute;
+        left: var(--spacing-sm);
+    }
+    
+    /* Ajuste para compensar o logo centralizado */
+    .nav-menu {
+        margin-left: auto;
+    }
+}
+
+/* Ajuste para quando o menu mobile estiver aberto */
+@media (max-width: 767px) {
+    .nav-menu.active + .logo {
+        z-index: 1001; /* Mantém o logo acima do menu mobile */
+    }
 }
 
 /* ===== SEÇÃO HERO ===== */
