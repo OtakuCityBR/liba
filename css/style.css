@@ -95,7 +95,7 @@ body {
 
 .logo {
     font-family: var(--font-japanese);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 700;
     color: var(--primary-red);
     text-decoration: none;
@@ -107,13 +107,13 @@ body {
 .logo::before {
     content: ""; /* Remove o emoji */
     display: inline-block;
-    width: 40px; /* Ajuste conforme necessário */
-    height: 40px; /* Ajuste conforme necessário */
+    width: 80px; /* Ajuste conforme necessário */
+    height: 80px; /* Ajuste conforme necessário */
     background-image: url('https://i.ibb.co/VYzm94Yz/logolib.png');
     background-size: contain;
     background-repeat: no-repeat;
     vertical-align: middle;
-    margin-right: 8px; /* Espaçamento opcional */
+    margin-right: 2px; /* Espaçamento opcional */
 }
 
 .location-info {
