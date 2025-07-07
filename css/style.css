@@ -105,8 +105,15 @@ body {
 }
 
 .logo::before {
-    content: "🏮";
-    font-size: 1.5rem;
+    content: ""; /* Remove o emoji */
+    display: inline-block;
+    width: 40px; /* Ajuste conforme necessário */
+    height: 40px; /* Ajuste conforme necessário */
+    background-image: url('https://i.ibb.co/VYzm94Yz/logolib.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-right: 8px; /* Espaçamento opcional */
 }
 
 .location-info {
