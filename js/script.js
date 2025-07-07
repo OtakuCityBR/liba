@@ -18,6 +18,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    window.addEventListener('load', function() {
+    document.querySelector('.logo').classList.add('logo-loaded');
+});
+
     // Lightbox functionality
     const lightbox = document.getElementById('lightbox');
     const lightboxImage = document.getElementById('lightboxImage');
